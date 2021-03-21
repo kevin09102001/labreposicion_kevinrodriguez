@@ -1133,20 +1133,20 @@ public class inicio extends javax.swing.JFrame {
         int aa = 0;
         if (tabla7.getSelectedRow() >= 0) {
             adminsuper au = new adminsuper("./super.txt");
-           
+
             au.cargarArchivo();
-            aa=au.getsuper().get(tabla7.getSelectedRow()).getNivel();
+            aa = au.getsuper().get(tabla7.getSelectedRow()).getNivel();
             try {
                 au.escribirArchivo();
             } catch (IOException ex) {
                 Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-         try { //por si ya esta iniciado
-        HT = new administrars(Integer.parseInt(cant1.getText()),aa, pg_d1);
-        
-                HT.start();
-            
+        try { //por si ya esta iniciado
+            HT = new administrars(Integer.parseInt(cant1.getText()), aa, pg_d1);
+
+            HT.start();
+
         } catch (Exception e) {
 
         }
@@ -1154,7 +1154,7 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
-       DefaultTableModel modelo1 = (DefaultTableModel) tabla6.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) tabla6.getModel();
         modelo1.getDataVector().removeAllElements();
         tabla6.updateUI();
         adminregular ap
@@ -1176,20 +1176,20 @@ public class inicio extends javax.swing.JFrame {
         int aa = 0;
         if (tabla6.getSelectedRow() >= 0) {
             adminregular au = new adminregular("./regular.txt");
-           
+
             au.cargarArchivo();
-            aa=au.getregular().get(tabla6.getSelectedRow()).getNivel();
+            aa = au.getregular().get(tabla6.getSelectedRow()).getNivel();
             try {
                 au.escribirArchivo();
             } catch (IOException ex) {
                 Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-         try { //por si ya esta iniciado
-        HC = new admistarR(Integer.parseInt(cant.getText()),aa, pg_d);
-        
-                HC.start();
-            
+        try { //por si ya esta iniciado
+            HC = new admistarR(Integer.parseInt(cant.getText()), aa, pg_d);
+
+            HC.start();
+
         } catch (Exception e) {
 
         }
@@ -1197,7 +1197,7 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17MouseClicked
 
     private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
-         DefaultTableModel modelo1 = (DefaultTableModel) tabla7.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) tabla7.getModel();
         modelo1.getDataVector().removeAllElements();
         tabla7.updateUI();
         adminsuper ap
@@ -1213,7 +1213,7 @@ public class inicio extends javax.swing.JFrame {
             modelo.addRow(newrow);
         }
         tabla7.setModel(modelo);
-                    
+
     }//GEN-LAST:event_jButton20MouseClicked
 
     /**
@@ -1326,6 +1326,6 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JTable tabla6;
     private javax.swing.JTable tabla7;
     // End of variables declaration//GEN-END:variables
-admistarR HC; 
-    administrars HT; 
+admistarR HC;
+    administrars HT;
 }

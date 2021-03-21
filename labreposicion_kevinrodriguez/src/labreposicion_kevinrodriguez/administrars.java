@@ -72,7 +72,7 @@ public class administrars extends Thread {
                 } else {
                     progBar_t.setValue(progBar_t.getValue() + 1);
                     try {
-                        Thread.sleep(g * 1000);
+                        Thread.sleep(g);
                     } catch (InterruptedException ex) {
 
                     }
