@@ -38,7 +38,23 @@ public class inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         simulacion = new javax.swing.JDialog();
-        jPanel7 = new javax.swing.JPanel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel8 = new javax.swing.JPanel();
+        jButton17 = new javax.swing.JButton();
+        pg_d = new javax.swing.JProgressBar();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        tabla6 = new javax.swing.JTable();
+        jButton19 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        cant = new javax.swing.JFormattedTextField();
+        jPanel9 = new javax.swing.JPanel();
+        pg_d1 = new javax.swing.JProgressBar();
+        jButton18 = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tabla7 = new javax.swing.JTable();
+        jButton20 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        cant1 = new javax.swing.JFormattedTextField();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         hakeo = new javax.swing.JLabel();
@@ -95,26 +111,196 @@ public class inicio extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jButton14 = new javax.swing.JButton();
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 679, Short.MAX_VALUE)
+        jButton17.setText("iniciar");
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton17MouseClicked(evt);
+            }
+        });
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        pg_d.setMaximum(1000);
+        pg_d.setToolTipText("");
+        pg_d.setString(Integer.toString(pg_d.getValue())+" Kilometros");
+        pg_d.setStringPainted(true);
+
+        tabla6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                " codigo", "nivel"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(tabla6);
+
+        jButton19.setText("mostrar");
+        jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton19MouseClicked(evt);
+            }
+        });
+
+        jLabel14.setText("cantidad de caracters");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(269, 269, 269)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(372, 372, 372)
+                        .addComponent(jButton19))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(pg_d, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(228, 228, 228)
+                        .addComponent(jLabel14)
+                        .addGap(18, 18, 18)
+                        .addComponent(cant, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(383, 383, 383)
+                        .addComponent(jButton17)))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 533, Short.MAX_VALUE)
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jButton19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(cant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(67, 67, 67)
+                .addComponent(pg_d, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(jButton17)
+                .addGap(77, 77, 77))
         );
+
+        jTabbedPane2.addTab("regular ", jPanel8);
+
+        pg_d1.setMaximum(1000);
+        pg_d1.setToolTipText("");
+        pg_d1.setString(Integer.toString(pg_d.getValue())+" Kilometros");
+        pg_d1.setStringPainted(true);
+
+        jButton18.setText("iniciar");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        tabla7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                " codigo", "nivel"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(tabla7);
+
+        jButton20.setText("mostrar");
+        jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton20MouseClicked(evt);
+            }
+        });
+
+        jLabel15.setText("cantidad de caracters");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(pg_d1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(289, 289, 289)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(262, 262, 262)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(144, 144, 144)
+                                .addComponent(jButton20))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel15)
+                                .addGap(18, 18, 18)
+                                .addComponent(cant1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(373, 373, 373)
+                        .addComponent(jButton18)))
+                .addContainerGap(238, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(jButton20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(cant1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(69, 69, 69)
+                .addComponent(pg_d1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addComponent(jButton18)
+                .addGap(64, 64, 64))
+        );
+
+        jTabbedPane2.addTab("super", jPanel9);
 
         javax.swing.GroupLayout simulacionLayout = new javax.swing.GroupLayout(simulacion.getContentPane());
         simulacion.getContentPane().setLayout(simulacionLayout);
         simulacionLayout.setHorizontalGroup(
             simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jTabbedPane2)
         );
         simulacionLayout.setVerticalGroup(
             simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jTabbedPane2)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -672,7 +858,7 @@ public class inicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -763,26 +949,26 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-DefaultTableModel modelo1 = (DefaultTableModel) tabla3.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) tabla3.getModel();
         modelo1.getDataVector().removeAllElements();
         tabla3.updateUI();
         adminsuper ap
-                    = new adminsuper("./super.txt");
-            ap.cargarArchivo();
-            DefaultTableModel modelo = (DefaultTableModel) tabla3.getModel();
-            //System.out.println(ap);
-            for (hacksuper t : ap.getsuper()) {
-                Object[] newrow = {
-                    t.getCodigo(),
-                    t.getNivel()
-                };
-                modelo.addRow(newrow);
-            }
-            tabla3.setModel(modelo);      
+                = new adminsuper("./super.txt");
+        ap.cargarArchivo();
+        DefaultTableModel modelo = (DefaultTableModel) tabla3.getModel();
+        //System.out.println(ap);
+        for (hacksuper t : ap.getsuper()) {
+            Object[] newrow = {
+                t.getCodigo(),
+                t.getNivel()
+            };
+            modelo.addRow(newrow);
+        }
+        tabla3.setModel(modelo);
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-       /* adminsuper ap
+        /* adminsuper ap
                 = new adminsuper("./super.txt");
         int p;
         p = Integer.parseInt(JOptionPane.showInputDialog("Posicion"));
@@ -799,48 +985,48 @@ DefaultTableModel modelo1 = (DefaultTableModel) tabla3.getModel();
         } catch (IOException ex) {
             Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-          if (tabla3.getSelectedRow() >= 0) {
-            adminsuper  au = new adminsuper("./super.txt");
+        if (tabla3.getSelectedRow() >= 0) {
+            adminsuper au = new adminsuper("./super.txt");
             DefaultTableModel modelo
                     = (DefaultTableModel) tabla3.getModel();
             au.cargarArchivo();
-                au.getsuper().get(tabla3.getSelectedRow()).setCodigo(Integer.parseInt(codigo3.getText()));
-                au.getsuper().get(tabla3.getSelectedRow()).setNivel(Integer.parseInt(nivel4.getSelectedItem().toString()));
-                
-                try {
-                    au.escribirArchivo();
-                } catch (IOException ex) {
-                    Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                modelo.setValueAt(Integer.parseInt(codigo3.getText()), 0, tabla3.getSelectedRow());
-                modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla3.getSelectedRow());
-                tabla3.setModel(modelo);
-                tabla3.setModel(modelo);
-                 JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
-          }
+            au.getsuper().get(tabla3.getSelectedRow()).setCodigo(Integer.parseInt(codigo3.getText()));
+            au.getsuper().get(tabla3.getSelectedRow()).setNivel(Integer.parseInt(nivel4.getSelectedItem().toString()));
+
+            try {
+                au.escribirArchivo();
+            } catch (IOException ex) {
+                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            modelo.setValueAt(Integer.parseInt(codigo3.getText()), 0, tabla3.getSelectedRow());
+            modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla3.getSelectedRow());
+            tabla3.setModel(modelo);
+            tabla3.setModel(modelo);
+            JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
+        }
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
         modelo1.getDataVector().removeAllElements();
         tabla2.updateUI();
         adminregular ap
-                    = new adminregular("./regular.txt");
-            ap.cargarArchivo();
-            DefaultTableModel modelo = (DefaultTableModel) tabla2.getModel();
-            //System.out.println(ap);
-            for (regular t : ap.getregular()) {
-                Object[] newrow = {
-                    t.getCodigo(),
-                    t.getNivel()
-                };
-                modelo.addRow(newrow);
-            }
-            tabla2.setModel(modelo);     
+                = new adminregular("./regular.txt");
+        ap.cargarArchivo();
+        DefaultTableModel modelo = (DefaultTableModel) tabla2.getModel();
+        //System.out.println(ap);
+        for (regular t : ap.getregular()) {
+            Object[] newrow = {
+                t.getCodigo(),
+                t.getNivel()
+            };
+            modelo.addRow(newrow);
+        }
+        tabla2.setModel(modelo);
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
-       /* adminregular ap
+        /* adminregular ap
                 = new adminregular("./regular.txt");
         int p;
         p = Integer.parseInt(JOptionPane.showInputDialog("Posicion"));
@@ -857,26 +1043,26 @@ DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
         } catch (IOException ex) {
             Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-         
-         if (tabla2.getSelectedRow() >= 0) {
+
+        if (tabla2.getSelectedRow() >= 0) {
             adminregular au = new adminregular("./regular.txt");
             DefaultTableModel modelo
                     = (DefaultTableModel) tabla2.getModel();
             au.cargarArchivo();
-                au.getregular().get(tabla2.getSelectedRow()).setCodigo(Integer.parseInt(codigo2.getText()));
-                au.getregular().get(tabla2.getSelectedRow()).setNivel(Integer.parseInt(nivel2.getSelectedItem().toString()));
-                
-                try {
-                    au.escribirArchivo();
-                } catch (IOException ex) {
-                    Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                modelo.setValueAt(Integer.parseInt(codigo2.getText()), 0, tabla2.getSelectedRow());
-                modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla2.getSelectedRow());
-                tabla2.setModel(modelo);
-                tabla2.setModel(modelo);
-                 JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
-         }
+            au.getregular().get(tabla2.getSelectedRow()).setCodigo(Integer.parseInt(codigo2.getText()));
+            au.getregular().get(tabla2.getSelectedRow()).setNivel(Integer.parseInt(nivel2.getSelectedItem().toString()));
+
+            try {
+                au.escribirArchivo();
+            } catch (IOException ex) {
+                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            modelo.setValueAt(Integer.parseInt(codigo2.getText()), 0, tabla2.getSelectedRow());
+            modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla2.getSelectedRow());
+            tabla2.setModel(modelo);
+            tabla2.setModel(modelo);
+            JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
+        }
     }//GEN-LAST:event_jButton10MouseClicked
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -884,60 +1070,151 @@ DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-     DefaultTableModel modelo1 = (DefaultTableModel) tabla5.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) tabla5.getModel();
         modelo1.getDataVector().removeAllElements();
         tabla5.updateUI();
         adminregular ap
-                    = new adminregular("./regular.txt");
-            ap.cargarArchivo();
-            DefaultTableModel modelo = (DefaultTableModel) tabla5.getModel();
-            //System.out.println(ap);
-            for (regular t : ap.getregular()) {
-                Object[] newrow = {
-                    t.getCodigo(),
-                    t.getNivel()
-                };
-                modelo.addRow(newrow);
-            }
-            tabla5.setModel(modelo);    
+                = new adminregular("./regular.txt");
+        ap.cargarArchivo();
+        DefaultTableModel modelo = (DefaultTableModel) tabla5.getModel();
+        //System.out.println(ap);
+        for (regular t : ap.getregular()) {
+            Object[] newrow = {
+                t.getCodigo(),
+                t.getNivel()
+            };
+            modelo.addRow(newrow);
+        }
+        tabla5.setModel(modelo);
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
-      DefaultTableModel modelo1 = (DefaultTableModel) tabla4.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) tabla4.getModel();
         modelo1.getDataVector().removeAllElements();
         tabla4.updateUI();
         adminsuper ap
-                    = new adminsuper("./super.txt");
-            ap.cargarArchivo();
-            DefaultTableModel modelo = (DefaultTableModel) tabla4.getModel();
-            //System.out.println(ap);
-            for (hacksuper t : ap.getsuper()) {
-                Object[] newrow = {
-                    t.getCodigo(),
-                    t.getNivel()
-                };
-                modelo.addRow(newrow);
-            }
-            tabla4.setModel(modelo);  
+                = new adminsuper("./super.txt");
+        ap.cargarArchivo();
+        DefaultTableModel modelo = (DefaultTableModel) tabla4.getModel();
+        //System.out.println(ap);
+        for (hacksuper t : ap.getsuper()) {
+            Object[] newrow = {
+                t.getCodigo(),
+                t.getNivel()
+            };
+            modelo.addRow(newrow);
+        }
+        tabla4.setModel(modelo);
     }//GEN-LAST:event_jButton12MouseClicked
 
     private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
-         if (tabla5.getSelectedRow() >= 0) {
+        if (tabla5.getSelectedRow() >= 0) {
             DefaultTableModel modelo
                     = (DefaultTableModel) tabla5.getModel();
             adminregular au = new adminregular("./autos.txt");
             modelo.removeRow(tabla5.getSelectedRow());
-                au.getregular().remove(tabla5.getSelectedRow());
+            au.getregular().remove(tabla5.getSelectedRow());
             tabla5.setModel(modelo);
         }
     }//GEN-LAST:event_jButton13MouseClicked
 
     private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
-       simulacion.setModal(true);
+        simulacion.setModal(true);
         simulacion.pack();
         simulacion.setLocationRelativeTo(this);
         simulacion.setVisible(true);
     }//GEN-LAST:event_jButton14MouseClicked
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        int aa = 0;
+        if (tabla7.getSelectedRow() >= 0) {
+            adminsuper au = new adminsuper("./super.txt");
+           
+            au.cargarArchivo();
+            aa=au.getsuper().get(tabla7.getSelectedRow()).getNivel();
+            try {
+                au.escribirArchivo();
+            } catch (IOException ex) {
+                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+         try { //por si ya esta iniciado
+        HT = new administrars(Integer.parseInt(cant1.getText()),aa, pg_d1);
+        
+                HT.start();
+            
+        } catch (Exception e) {
+
+        }
+        HT.setAvanzar(true);
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
+       DefaultTableModel modelo1 = (DefaultTableModel) tabla6.getModel();
+        modelo1.getDataVector().removeAllElements();
+        tabla6.updateUI();
+        adminregular ap
+                = new adminregular("./regular.txt");
+        ap.cargarArchivo();
+        DefaultTableModel modelo = (DefaultTableModel) tabla6.getModel();
+        //System.out.println(ap);
+        for (regular t : ap.getregular()) {
+            Object[] newrow = {
+                t.getCodigo(),
+                t.getNivel()
+            };
+            modelo.addRow(newrow);
+        }
+        tabla6.setModel(modelo);
+    }//GEN-LAST:event_jButton19MouseClicked
+
+    private void jButton17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseClicked
+        int aa = 0;
+        if (tabla6.getSelectedRow() >= 0) {
+            adminregular au = new adminregular("./regular.txt");
+           
+            au.cargarArchivo();
+            aa=au.getregular().get(tabla6.getSelectedRow()).getNivel();
+            try {
+                au.escribirArchivo();
+            } catch (IOException ex) {
+                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+         try { //por si ya esta iniciado
+        HC = new admistarR(Integer.parseInt(cant.getText()),aa, pg_d);
+        
+                HC.start();
+            
+        } catch (Exception e) {
+
+        }
+        HC.setAvanzar(true);
+    }//GEN-LAST:event_jButton17MouseClicked
+
+    private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
+         DefaultTableModel modelo1 = (DefaultTableModel) tabla7.getModel();
+        modelo1.getDataVector().removeAllElements();
+        tabla7.updateUI();
+        adminsuper ap
+                = new adminsuper("./super.txt");
+        ap.cargarArchivo();
+        DefaultTableModel modelo = (DefaultTableModel) tabla7.getModel();
+        //System.out.println(ap);
+        for (hacksuper t : ap.getsuper()) {
+            Object[] newrow = {
+                t.getCodigo(),
+                t.getNivel()
+            };
+            modelo.addRow(newrow);
+        }
+        tabla7.setModel(modelo);
+                    
+    }//GEN-LAST:event_jButton20MouseClicked
 
     /**
      * @param args the command line arguments
@@ -975,6 +1252,8 @@ DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFormattedTextField cant;
+    private javax.swing.JFormattedTextField cant1;
     private javax.swing.JFormattedTextField codigo;
     private javax.swing.JFormattedTextField codigo1;
     private javax.swing.JFormattedTextField codigo2;
@@ -988,7 +1267,11 @@ DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1001,6 +1284,8 @@ DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1015,22 +1300,32 @@ DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JComboBox<String> nivel;
     private javax.swing.JComboBox<String> nivel1;
     private javax.swing.JComboBox<String> nivel2;
     private javax.swing.JComboBox<String> nivel4;
+    public javax.swing.JProgressBar pg_d;
+    public javax.swing.JProgressBar pg_d1;
     private javax.swing.JDialog simulacion;
     private javax.swing.JTable tabla1;
     private javax.swing.JTable tabla2;
     private javax.swing.JTable tabla3;
     private javax.swing.JTable tabla4;
     private javax.swing.JTable tabla5;
+    private javax.swing.JTable tabla6;
+    private javax.swing.JTable tabla7;
     // End of variables declaration//GEN-END:variables
+admistarR HC; 
+    administrars HT; 
 }
